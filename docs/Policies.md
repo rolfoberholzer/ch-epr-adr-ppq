@@ -1,6 +1,6 @@
 # Official EPR Policy Stack
 
-*Author: [Dmytro Rud](mailto:dmytro.rud@gmail.com), last change: 16-Aug-2023.*
+*Author: [Dmytro Rud](mailto:dmytro.rud@gmail.com), last change: 05-May-2024.*
 
 According to chapter 4 of amendment 2.1 of annex 5 [EPRO-FDHA](https://www.fedlex.admin.ch/eli/oc/2023/221/de/annexes),
 the official EPR [policy stack](https://github.com/ehealthsuisse/ch-epr-adr-ppq/tree/main/Privacy%20Policy%20Stack)
@@ -167,7 +167,7 @@ these templates can be represented graphically in the following way (IDs of base
 in a shortened form, without the common prefix `urn:e-health-suisse:2015:policies:`):
 
 ![Relations among EPR base policies, base policy sets, policy set templates, and user-defined policy sets generated from
-these templates](policies.png)
+these templates](policies.svg)
 
 Detailed descriptions of the elements of the EPR Official Policy Stack will be provided in the subsequent
 sections. Target constraints of policies and policy sets will be represented as lists of allowed
@@ -476,7 +476,7 @@ Notes:
 **Policy set template ID 301:**
 
 - File name: 301-patient-user-assignment-template.xml
-- Referenced policy sets: 101 or 102 or 103 or 104 or 106 **(103 and 104 — only in Release 2023)**
+- Referenced policy sets: 101 or 102 or 106
 - Effect:
     - 101, 102 🡒 Permit a healthcare professional (note 3) identified by the given GLN to enquire metadata and
       content of documents with the given confidentiality code(s).
@@ -517,7 +517,7 @@ Notes:
 - Allowed user role(s): `REP`
 - Time restriction: optional
 
-**Policy set template ID 304 (starting with Release 2024):**
+**Policy set template ID 304:**
 
 - File name: 304-patient-user-assignment-with-delegation-template.xml
 - Referenced policy sets: 103 or 104
@@ -573,7 +573,7 @@ function definitions. Functions are defined using XSLT (element `<xsl:function>`
     * Designator predicates.
 * `${Type}Match` predicates,
 * Subject list predicates,
-* Resource list predicates **(starting with Release 2024)**,
+* Resource list predicates,
 * Element combination predicates.
 
 The order of this listing is "from functions handling simple value to functions handling complex objects", and this is
@@ -646,8 +646,7 @@ and constitute a specialization hierarchy as shown on the picture below:
 ![Hierarchy of ${Type}Match predicates](match-predicates.svg)
 
 Abstract predicates (the ones serving solely as a basis for defining more specialized predicates) are marked with grey
-background. Green color is used to mark predicates that exist only starting with the Release 2024 of the Schematron
-script.
+background.
 
 The most generic predicate is `is-given-match`. It returns `true` iff the given element `${Type}Match` contains
 
@@ -749,7 +748,7 @@ All other `${Type}Match` predicates are derived from `is-given-match` as specifi
     - Expected attribute value (identifier) must be an EPR-SPID and have the assigning authority
       OID `2.16.756.5.30.1.127.3.10.3`
 
-**Predicate `is-date-resource-match`(starting with Release 2024):**
+**Predicate `is-date-resource-match`:**
 
 - Derived from: `is-given-match`
 - Additional constraints:
@@ -850,12 +849,12 @@ as the template 203 has three `Subject` elements that differ from each other by 
 
 ### 3.6. Resource list predicates
 
-The resource list predicates exist only starting with Release 2024. Like the subject list predicates, they
+Like the subject list predicates, the resource list predicates
 define rules for sub-elements `ResourceMatch` in a `Resource`. The difference is that these rules are not unique for
 each policy set template — instead, there are only two flavors:
 
 * Rules common for templates 201–203 and 301–303.
-* Rules for the template 304 (introduced in Release 2024 as well).
+* Rules for the template 304.
 
 Correspondingly, the predicates are named `is-common-resource-matches` and `is-template-304-resource-matches`.
 
