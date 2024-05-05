@@ -16,7 +16,7 @@ History:
 	xmlns:hl7="urn:hl7-org:v3"
 	xmlns="urn:oasis:names:tc:xacml:2.0:policy:schema:os"
 	PolicyCombiningAlgId="urn:oasis:names:tc:xacml:1.0:policy-combining-algorithm:deny-overrides"
-	PolicySetId="urn:uuid:360b4789-95c4-4b02-9bd9-590559761fa9">
+	PolicySetId="urn:uuid:e693657c-50be-46a6-bdcd-05269147f202">
 	<Description>
 		Patient specific PolicySet for EPD Setup 202 - granting default access level to the patients EPD for health professionals in case of a emergency access.
 		This policy set can be modified by the patient via a Policy Manager pointing to the more or less restrictive option (PolicyIdReference below)
@@ -53,7 +53,7 @@ History:
 			<Resource>
 				<ResourceMatch MatchId="urn:hl7-org:v3:function:II-equal">
 					<AttributeValue DataType="urn:hl7-org:v3#II">
-						<!-- epd-spid-goes-here must be replaced with the real EPR-sPID of the patient -->
+						<!-- epr-spid-goes-here must be replaced with the real EPR-SPID of the patient -->
 						<hl7:InstanceIdentifier root="2.16.756.5.30.1.127.3.10.3" extension="epr-spid-goes-here"/>
 					</AttributeValue>
 					<ResourceAttributeDesignator

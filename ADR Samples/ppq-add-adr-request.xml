@@ -39,6 +39,12 @@
             <Attribute AttributeId="urn:e-health-suisse:2015:policy-attributes:referenced-policy-set" DataType="http://www.w3.org/2001/XMLSchema#anyURI">
                 <AttributeValue>urn:e-health-suisse:2015:policies:access-level:full</AttributeValue>
             </Attribute>
+            <Attribute AttributeId="urn:e-health-suisse:2023:policy-attributes:start-date" DataType="http://www.w3.org/2001/XMLSchema#date">
+                <AttributeValue>2024-05-05</AttributeValue>
+            </Attribute>
+            <Attribute AttributeId="urn:e-health-suisse:2023:policy-attributes:end-date" DataType="http://www.w3.org/2001/XMLSchema#date">
+                <AttributeValue>2024-05-05</AttributeValue>
+            </Attribute>
         </Resource>
         <Resource>
             <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI">
@@ -52,6 +58,12 @@
             <Attribute AttributeId="urn:e-health-suisse:2015:policy-attributes:referenced-policy-set" DataType="http://www.w3.org/2001/XMLSchema#anyURI">
                 <AttributeValue>urn:e-health-suisse:2015:policies:provide-level:normal</AttributeValue>
             </Attribute>
+            <Attribute AttributeId="urn:e-health-suisse:2023:policy-attributes:start-date" DataType="http://www.w3.org/2001/XMLSchema#date">
+                <AttributeValue>2024-05-05</AttributeValue>
+            </Attribute>
+            <Attribute AttributeId="urn:e-health-suisse:2023:policy-attributes:end-date" DataType="http://www.w3.org/2001/XMLSchema#date">
+                <AttributeValue>2024-05-05</AttributeValue>
+            </Attribute>
         </Resource>
         <Resource>
             <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:resource-id" DataType="http://www.w3.org/2001/XMLSchema#anyURI">
@@ -64,6 +76,12 @@
             </Attribute>
             <Attribute AttributeId="urn:e-health-suisse:2015:policy-attributes:referenced-policy-set" DataType="http://www.w3.org/2001/XMLSchema#anyURI">
                 <AttributeValue>urn:e-health-suisse:2015:policies:access-level:normal</AttributeValue>
+            </Attribute>
+            <Attribute AttributeId="urn:e-health-suisse:2023:policy-attributes:start-date" DataType="http://www.w3.org/2001/XMLSchema#date">
+                <AttributeValue>2024-05-01</AttributeValue>
+            </Attribute>
+            <Attribute AttributeId="urn:e-health-suisse:2023:policy-attributes:end-date" DataType="http://www.w3.org/2001/XMLSchema#date">
+                <AttributeValue>2024-05-31</AttributeValue>
             </Attribute>
         </Resource>
         <Action>
