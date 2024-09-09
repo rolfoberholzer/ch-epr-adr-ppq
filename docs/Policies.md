@@ -438,6 +438,10 @@ Notes:
 - Allowed document confidentiality code(s): `*`
 - Allowed purpose(s) of use: `*`
 - Allowed user role(s): `PAT`
+- Attributes to fill in: 
+  - Policy set ID
+  - EPR-SPID in `SubjectMatch`
+  - EPR-SPID in `ResourceMatch`
 
 **Policy set template 202:**
 
@@ -450,6 +454,10 @@ Notes:
     - 102 🡒 `NORMAL`, `RESTRICTED`
 - Allowed purpose(s) of use: `EMER`
 - Allowed user role(s): `HCP`
+- Attributes to fill in: 
+  - Policy set ID
+  - EPR-SPID in `ResourceMatch`
+  - ID of the referenced policy set
 
 **Policy set template 203:**
 
@@ -462,6 +470,10 @@ Notes:
     - 109 🡒 `SECRET`
 - Allowed purpose(s) of use: `NORM`, `AUTO`, `DICOM_AUTO`
 - Allowed user role(s): `HCP`
+- Attributes to fill in: 
+  - Policy set ID
+  - EPR-SPID in `ResourceMatch`
+  - ID of the referenced policy set
 
 Notes:
 
@@ -480,19 +492,25 @@ Notes:
 - Effect:
     - 101, 102 🡒 Permit a healthcare professional (note 3) identified by the given GLN to enquire metadata and
       content of documents with the given confidentiality code(s).
-    - 103, 104 🡒 Same as respectively 101 or 102, but additionally permit to delegate the same permissions to other
-      healthcare professionals.
     - 106 🡒 Deny healthcare professional's access to the patient's EPR. This has a priority over all other policies and
       policy sets.
 - Allowed document confidentiality code(s):
-    - 101, 103 🡒 `NORMAL`
-    - 102, 104 🡒 `NORMAL`, `RESTRICTED`
+    - 101 🡒 `NORMAL`
+    - 102 🡒 `NORMAL`, `RESTRICTED`
     - 106 🡒 n/a
 - Allowed purpose(s) of use: `NORM`, `EMER`
 - Allowed user role(s): `HCP`
-- Time restriction:
-    - 103, 104 🡒 required
-    - 101, 102, 106 🡒 optional
+- Time restriction: optional
+- Attributes to fill in: 
+  - Policy set ID
+  - GLN in `SubjectMatch`
+  - EPR-SPID in `ResourceMatch`
+  - Start date of the validity in `EnvironmentMatch` (optional if the end date is present, otherwise prohibited)
+  - End date of the validity in `EnvironmentMatch` (optional)
+  - ID of the referenced policy set
+
+The element `Environments` shall be created only if the end date of the validity is provided.
+Its sub-element `EnvironmentMatch` for the start date shall be created only if this date is provided.
 
 **Policy set template ID 302:**
 
@@ -506,6 +524,15 @@ Notes:
 - Allowed purpose(s) of use: `NORM`, `EMER`
 - Allowed user role(s): `HCP`
 - Time restriction: required
+- Attributes to fill in:
+  - Policy set ID
+  - Group OID in `SubjectMatch`
+  - EPR-SPID in `ResourceMatch`
+  - Start date of the validity in `EnvironmentMatch` (optional)
+  - End date of the validity in `EnvironmentMatch`
+  - ID of the referenced policy set
+
+The element `EnvironmentMatch` for the start date shall be created only if this date is provided.
 
 **Policy set template ID 303:**
 
@@ -516,6 +543,16 @@ Notes:
 - Allowed purpose(s) of use: `*`
 - Allowed user role(s): `REP`
 - Time restriction: optional
+- Attributes to fill in:
+  - Policy set ID
+  - Representative ID in `SubjectMatch`
+  - EPR-SPID in `ResourceMatch`
+  - Start date of the validity in `EnvironmentMatch` (optional if the end date is present, otherwise prohibited)
+  - End date of the validity in `EnvironmentMatch` (optional)
+  - ID of the referenced policy set
+
+The element `Environments` shall be created only if the end date of the validity is provided.
+Its sub-element `EnvironmentMatch` for the start date shall be created only if this date is provided.
 
 **Policy set template ID 304:**
 
@@ -529,6 +566,17 @@ Notes:
 - Allowed purpose(s) of use: `NORM`, `EMER`
 - Allowed user role(s): `HCP`
 - Time restriction: required
+- Attributes to fill in:
+  - Policy set ID
+  - GLN in `SubjectMatch`
+  - EPR-SPID in `ResourceMatch`
+  - Start date of the validity in `ResourceMatch` (optional)
+  - End date of the validity in `ResourceMatch`
+  - Start date of the validity in `EnvironmentMatch` (optional)
+  - End date of the validity in `EnvironmentMatch`
+  - ID of the referenced policy set
+
+Elements `ResourceMatch` and `EnvironmentMatch` for the start date shall be created only if this date is provided.
 
 ## 3. Schematron script for validation of privacy policies
 
