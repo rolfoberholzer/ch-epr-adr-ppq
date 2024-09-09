@@ -1,6 +1,6 @@
 # Official EPR Policy Stack
 
-*Author: [Dmytro Rud](mailto:dmytro.rud@gmail.com), last change: 05-May-2024.*
+*Author: [Dmytro Rud](mailto:dmytro.rud@gmail.com), last change: 27-August-2024.*
 
 According to chapter 4 of amendment 2.1 of annex 5 [EPRO-FDHA](https://www.fedlex.admin.ch/eli/oc/2023/221/de/annexes),
 the official EPR [policy stack](https://github.com/ehealthsuisse/ch-epr-adr-ppq/tree/main/Privacy%20Policy%20Stack)
@@ -357,7 +357,7 @@ Notes:
 - Referenced policies / policy sets: 101
 - Effect of referenced policies / policy sets: Permit to enquire document metadata and contents, to modify document
   metadata, and to delegate these permissions to other HCPs
-- Locally defined additional effect: Permit to enquire and delete any privacy policies, and to add and modify privacy
+- Locally defined additional effect: Permit to add and modify privacy 
   policies granting the permissions defined in 101
 - Allowed document confidentiality code(s): `NORMAL`
 - Allowed purpose(s) of use: `NORM`, `EMER`
@@ -370,7 +370,7 @@ Notes:
 - Referenced policies / policy sets: 102
 - Effect of referenced policies / policy sets: Permit to enquire document metadata and contents, to modify document
   metadata, and to delegate these permissions to other HCPs
-- Locally defined additional effect: Permit to enquire and delete any privacy policies, and to add and modify privacy
+- Locally defined additional effect: Permit to add and modify privacy
   policies granting the permissions defined in 102
 - Allowed document confidentiality code(s): `NORMAL`, `RESTRICTED`
 - Allowed purpose(s) of use: `NORM`, `EMER`
