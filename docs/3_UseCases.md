@@ -4,35 +4,23 @@
 
 1. During the onboarding of a patient, only the Policy Administrator can submit policy sets related to this patient.
 After the onboarding, policy sets related to the patient can be submitted by the patient himself, 
-by his representatives (if any), or by the Policy Administrator on behalf of the patient.
-  <br/>
-  <br/>
+by his representatives (if any), or by the Policy Administrator on behalf of the patient.  <br/><br/>
 2. In the use case descriptions below, the statements "the patient wants", "the patient decides", etc. cover 
 also situations when a representative (authorized by the means of a corresponding policy set) 
-decides and acts on behalf of the patient.
-   <br/>
-   <br/>
+decides and acts on behalf of the patient.   <br/><br/>
 3. A policy set can be updated either by an in-place modification (CH:PPQ-1 UpdatePolicy), or by
 a deletion (CH:PPQ-1 DeletePolicy) followed by a resubmission (CH:PPQ-1 AddPolicy) of the policy set.
-When modifying a policy set in-place, its ID and the EPR-SPID shall be not changed.
-   <br/>
-   <br/>
+When modifying a policy set in-place, its ID and the EPR-SPID shall be not changed.    <br/><br/>
 Healthcare professionals with the right to delegate permissions can perform only in-place modifications
-of policy sets.
-   <br/>
-   <br/>
+of policy sets.   <br/><br/>
 In regard to policy sets based on templates 301–304, and only when the patient 
 (for policy sets based on template 301 — also a healthcare professional with the right to delegate permissions) 
 wants to _broaden_ the permissions of a healthcare professional, a group of healthcare professionals, 
 or a representative, i.e. to raise the confidentiality level of available documents or to extend the validity period,
 the original policy set may be left untouched, and a new, additional policy set of the same type may be submitted.
-The same is true for the prolongation of exclusion list memberships (a special flavor of policy sets based on template 301).
-   <br/>
-   <br/>
+The same is true for the prolongation of exclusion list memberships (a special flavor of policy sets based on template 301).   <br/><br/>
 But it is nevertheless advisable to have at most one policy set for any given combination of template ID, EPR-SPID, 
-and GLN/group OID/representative ID.
-   <br/>
-   <br/>
+and GLN/group OID/representative ID.   <br/><br/>
 4. Putting a healthcare professional into the exclusion list (by submitting a corresponding policy set) 
 will outpower all other policy sets applicable onto him.
 

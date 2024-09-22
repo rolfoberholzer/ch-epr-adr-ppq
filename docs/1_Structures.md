@@ -105,7 +105,7 @@ policy set will resolve to `true`, and the same for `Action`, `Resource`, and `E
 Elements `SubjectMatch` used in EPR policies and policy sets can be furthermore classified as matchers of:
 
 * group IDs (OIDs),
-* subject IDs (GLNs, EPR-SPIDs, representative's IDs),
+* person IDs (GLNs, EPR-SPIDs, representative's IDs),
 * subject ID qualifier codes (person ID types),
 * subject role codes,
 * purpose of use codes.
