@@ -106,7 +106,7 @@ Policy set(s) based on template 301 and referencing this healthcare professional
 Policy set(s) based on template 301 and referencing this healthcare professional shall be deleted.
 
 
-**UC301-4: The patient wants to prohibit both any access to his EPR by a particular healthcare professional**
+**UC301-4: The patient wants to prohibit any access to his EPR by a particular healthcare professional**
 
 A policy set based on template 301 shall be submitted after the onboarding of the patient.
 
@@ -187,7 +187,7 @@ Attributes to fill in the template:
 Policy set(s) based on template 303 and referencing this representative shall be updated.
 
 
-**UC303-3: The patient wants to withdraw permissions of representative**
+**UC303-3: The patient wants to withdraw permissions of a representative**
 
 Policy set(s) based on template 303 and referencing this representative shall be deleted.
 
