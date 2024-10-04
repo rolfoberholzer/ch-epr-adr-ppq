@@ -24,7 +24,7 @@ History:
 			<Subject>
 				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
 					<!-- GLN of the health professional or ID of a custodian to be authorized -->
-					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">2.999</AttributeValue>
+					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">7601000999999</AttributeValue>
 					<SubjectAttributeDesignator
 						AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id"
 					DataType="http://www.w3.org/2001/XMLSchema#string" />
