@@ -20,7 +20,7 @@ History:
 	<Target>
 		<Subjects>
 			<Subject>
-				<!-- GLN of a group of professionals to be authorized -->
+				<!-- OID of a group of professionals to be authorized -->
 				<SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:anyURI-equal">
 					<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#anyURI">urn:oid:2.999</AttributeValue>
 					<SubjectAttributeDesignator
